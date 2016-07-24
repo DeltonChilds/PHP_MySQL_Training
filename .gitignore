@@ -1,0 +1,20 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+
+# IntelliJ Idea
+*.iml
+.idea
+
+# Foundation Framework
+/css/foundation.css
+/css/foundation.min.css
+/css/normalize.css
+/Foundation
+/js/foundation
+/js/foundation.min.js
+/js/vendor
+
+# Images Directory
+/img
+
+
