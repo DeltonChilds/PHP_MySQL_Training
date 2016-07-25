@@ -3,7 +3,7 @@
 
 # IntelliJ Idea
 *.iml
-.idea
+.project
 
 # Foundation Framework
 /css/foundation.css
