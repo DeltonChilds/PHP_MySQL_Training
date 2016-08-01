@@ -26,7 +26,7 @@
 			</header>
 			<nav class="row 12-col-large">
 				<p>
-					<a href=""><?php echo htmlspecialchars($link_name); ?></a>
+					<a href="/PHP_Essential_Training/index.php">Home</a>
 				</p>
 			</nav>
 
