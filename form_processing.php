@@ -12,7 +12,14 @@ include("includes/header.php");
 
 		?>
         </pre>
-              
+        <?php
+			
+			if(isset($_POST["submit"])){
+				echo "<p>Form was submitted.</p>";
+				}
+		
+		 ?>
+        
               
         </div>
         
