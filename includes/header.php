@@ -1,11 +1,22 @@
-<?php require_once('includes/functions.php')?>
+<?php require_once('functions.php')?>
 <?php 
-	// sets cookie
-	$name = "test";
-	$value = "45";
-	$expire = time() + (60*60*24*7); //add seconds
-	//setcookie($name, $value, $expire);
- ?>
+	
+	$dbhost = "localhost"; 
+	$dbuser = "widget_cms";
+	$dbpass = "secretpassword";
+	$dbname = "widget_corp";
+	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	
+	// test if connection occured. 
+	if(mysqli_connect_errno()){
+		die("database connection failed: " . 
+		   mysqli_connect_error() . 
+		   " (" . mysqli_connect_errno() . ")"); 
+	}
+
+
+	?>
+	
 <!DOCTYPE html>
 <html lang="en">
 	<head>
