@@ -7,6 +7,8 @@
 
 #Dreamweaver Notes
 _notes/dwsync.xml
+.DS_Store
+includes/layouts/_notes/dwsync.xml
 
 # Foundation Framework
 /css/foundation.css
@@ -22,9 +24,3 @@ _notes/dwsync.xml
 
 
 
-
-.DS_Store
-
-_notes/dwsync.xml
-
-includes/layouts/_notes/dwsync.xml
