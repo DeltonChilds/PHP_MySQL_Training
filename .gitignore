@@ -5,6 +5,9 @@
 *.iml
 .project
 
+#Dreamweaver Notes
+_notes/dwsync.xml
+
 # Foundation Framework
 /css/foundation.css
 /css/foundation.min.css
@@ -18,3 +21,10 @@
 /img
 
 
+
+
+.DS_Store
+
+_notes/dwsync.xml
+
+includes/layouts/_notes/dwsync.xml
