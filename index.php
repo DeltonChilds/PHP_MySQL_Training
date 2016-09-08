@@ -1,20 +1,6 @@
-<<<<<<< HEAD
 <?php require_once('includes/functions.php')?>
 <?php include('includes/header.php')?>
-			<div class="row">
-			<?php 
-				$link_name="Second Page";
-				$id=2;
-			?>	
-				
-			<a href="second_page.php?&id=<?php echo $id?>"><?php echo $link_name?></a>
-=======
-<?php 
-require_once 'includes/functions.php';
-include_once 'includes/layouts/header.php';
-?>
->>>>>>> cms-foundation
-
+ <?php include_once 'includes/layouts/header.php'; ?>
 		<nav class="row">
 			<div class="large-12 columns">
 				<ul class="menu">

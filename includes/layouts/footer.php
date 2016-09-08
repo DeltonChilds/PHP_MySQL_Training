@@ -5,7 +5,11 @@
 		</p>
 	</section>
 </footer>
-
+<script>
+   $(document).ready(function() {
+      $(document).foundation();
+   })
+</script>
 </body>
 </html>
 <?php
