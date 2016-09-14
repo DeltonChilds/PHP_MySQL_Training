@@ -7,3 +7,11 @@ footer{
     background-color: #e6e6e6;
 
 }
+
+ul.pages{
+	font-weight:normal;
+}
+
+.selected {
+	font-weight:bold;
+}
