@@ -31,14 +31,15 @@ if (isset ( $_GET ["subject"] )) {
 <div class="row">
 	<section class="large-4 medium-6 small-12 columns">
 		<h2>Manage Content</h2>
-		<ul>
-			<li><?php echo (isset($selected_subject_id) ? $selected_subject_id : "No Subject Selected") ?></li>
-			<li><?php echo (isset($selected_page_id) ? $selected_page_id : "No Page Selected") ?></li>
-		</ul>
-		<p>Pellentesque habitant morbi tristique senectus et netus et
-			malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
-			vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
-			amet quam egestas semper. Aenean ultricies mi vitae est.</p>
+	
+		<?php if($selected_subject_id) { ?>
+		 	
+		<?php echo $selected_subject_id; ?><br>
+		<?php  }elseif($selected_page_id){ ?>			
+			<?php  echo $selected_page_id ?>
+		<?php }else {?>
+				<?php echo "Please select a subject or page. "?>
+		<?php }?>
 	</section>
 	<section class="large-8 medium-6 small-12 columns">
 		<h2>HTML Ipsum</h2>
