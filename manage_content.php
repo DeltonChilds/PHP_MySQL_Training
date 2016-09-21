@@ -1,44 +1,32 @@
 <?php
 require_once ('includes/db_connection.php');
 ?>
-<?php
-
-require_once 'includes/functions.php';
+<?php require_once 'includes/functions.php';
 ?>
-<?php
+<?php include_once 'includes/layouts/header.php'; ?>
 
-include_once 'includes/layouts/header.php';
-?>
-
-<?php
-
-if (isset ( $_GET ["subject"] )) {
-	$selected_subject_id = $_GET ["subject"];
-	$selected_page_id = null;
-} elseif (isset ( $_GET ["page"] )) {
-	$selected_page_id = $_GET ["page"];
-	$selected_subject_id = null;
-} else {
-	$selected_page_id = null;
-	$selected_subject_id = null;
-}
-?>
+<?php find_selected_page(); ?>
 <nav class="row">
 	<div class="large-12 columns">
-		<?php echo navigation($selected_subject_id, $selected_page_id); ?>
+		<?php echo navigation($current_subject, $current_page); ?>
   </div>
 </nav>
 <div class="row">
 	<section class="large-4 medium-6 small-12 columns">
 		<h2>Manage Content</h2>
-	
-		<?php if($selected_subject_id) { ?>
-		 	
-		<?php echo $selected_subject_id; ?><br>
-		<?php  }elseif($selected_page_id){ ?>			
-			<?php  echo $selected_page_id ?>
+	Menu Name: 
+		<?php if($current_subject) { ?>
+		 			
+			<?php echo $current_subject['menu_name']?>
+						
+		<?php  }elseif($current_page){ ?>			
+				
+			<?php  echo $current_page["menu_name"] ?>
+					
 		<?php }else {?>
+		
 				<?php echo "Please select a subject or page. "?>
+		
 		<?php }?>
 	</section>
 	<section class="large-8 medium-6 small-12 columns">
