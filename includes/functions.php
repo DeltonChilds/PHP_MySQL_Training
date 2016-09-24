@@ -1,4 +1,16 @@
 <?php
+
+function redirect_to($new_location){
+	header("Location: " . $new_location);
+	exit;
+}
+
+function mysql_prep($sting){
+	global $connection;
+	$escaped_string = mysqli_real_escape_string($connection, $string);
+	return $escaped_string;
+}
+
 function confirm_query($result_set) {
 	if (! $result_set) {
 		die ( "Database query failed." );
@@ -67,6 +79,8 @@ function navigation($subject_array, $page_array) {
 	          $output .= urlencode($page['id']) . "\">";
 	          $output .= $page['menu_name'] . "</a></li>";
 	          } 
+	        
+	           
 	          $output .= "</ul>";
 	        mysqli_free_result($page_set); 
 	        
@@ -75,8 +89,12 @@ function navigation($subject_array, $page_array) {
 			
 	      $output .= "</li>";
 	      }
+	      // adds new content link to navigation file
+	      $output .= "<li><a href=\"new_subject.php\">+ New Subject</a></li>";
 	    $output .= "</ul>";
 	    mysqli_free_result($subject_set); 
+	    
+	    
 	 return $output;
 }
 

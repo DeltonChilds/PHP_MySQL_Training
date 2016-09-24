@@ -29,6 +29,7 @@ require_once ('includes/db_connection.php');
 		
 		<?php }?>
 	</section>
+	
 	<section class="large-8 medium-6 small-12 columns">
 		<h2>HTML Ipsum</h2>
 		<p>Pellentesque habitant morbi tristique senectus et netus et
