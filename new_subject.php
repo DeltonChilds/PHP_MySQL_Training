@@ -1,21 +1,20 @@
 <?php
+require_once ('includes/session.php');
 require_once ('includes/db_connection.php');
-?>
-<?php
-
 require_once 'includes/functions.php';
+include_once 'includes/layouts/header.php';
 ?>
-<?php include_once 'includes/layouts/header.php'; ?>
-
 <?php find_selected_page(); ?>
 <nav class="row">
 	<div class="large-12 columns">
 		<?php echo navigation($current_subject, $current_page); ?>
   </div>
 </nav>
+<?php echo message(); ?>
+	<?php $errors = errors();?>
+	<?php echo form_errors($errors); ?>
 <div class="row">
 	<section class="large-6 medium-12 small-12 columns">
-
 		<form action="create_subject.php" method="post">
 			<p>
 				<label for="menu_name">Menu Name:</label> <input type="text"

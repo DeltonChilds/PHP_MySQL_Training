@@ -24,6 +24,7 @@
 <script src="../../js/app.js"></script>
 </head>
 <body>
+<div class="container">
 <header class="row">
   <div class="12-large columns">
     <h1>Widget Corp</h1>
